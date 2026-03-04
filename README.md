@@ -8,7 +8,7 @@ Make sure you read through and understand the challenge, then work through your 
 
 ## Getting Started
 
-- [ ] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
+- [x] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
 
 Next, follow these steps in order to link the cloned repository in your local dev environment with the original repository on CodesmithLLC's GitHub.
 

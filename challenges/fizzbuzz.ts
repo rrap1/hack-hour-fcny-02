@@ -13,9 +13,24 @@ fizzbuzz(16);
 */
 
 const fizzbuzz = (num: number): (number | string)[] => {
-  return [];
+  let count = 0;
+  const result = [];
+  while (count < num) {
+    count++;
+    if (count % 3 === 0 && count % 5 === 0) {
+      result.push('fizzbuzz');
+    } else if (count % 3 === 0 && count % 5 !== 0) {
+      result.push('fizz');
+    } else if (count % 3 !== 0 && count % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push(count);
+    }
+  }
+  return result;
 };
 
+console.log(fizzbuzz(25));
 /*
 
 Extension: 
@@ -37,7 +52,32 @@ fizzbuzzbazz(25);
 */
 
 const fizzbuzzbazz = (num: number): (number | string)[] => {
-  return [];
+  let count = 0;
+  const result = [];
+  while (count < num) {
+    count++;
+
+    if (count % 3 === 0 && count % 5 !== 0 && count % 7 !== 0) {
+      result.push('fizz');
+    } else if (count % 5 === 0 && count % 7 !== 0 && count % 3 !== 0) {
+      result.push('buzz');
+    } else if (count % 7 === 0 && count % 5 !== 0 && count % 3 !== 0) {
+      result.push('bazz');
+    } else if (count % 3 === 0 && count % 5 === 0 && count % 7 !== 0) {
+      result.push('fizzbuzz');
+    } else if (count % 3 === 0 && count % 7 === 0 && count % 5 !== 0) {
+      result.push('fizzbazz');
+    } else if (count % 5 === 0 && count % 7 === 0 && count % 3 !== 0) {
+      result.push('buzzbazz');
+    } else if (count % 5 === 0 && count % 7 === 0 && count % 3 === 0) {
+      result.push('fizzbuzzbazz');
+    } else {
+      result.push(count);
+    }
+  }
+  return result;
 };
+
+console.log(fizzbuzzbazz(25))
 
 export { fizzbuzz, fizzbuzzbazz };
