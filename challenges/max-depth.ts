@@ -1,0 +1,44 @@
+/*
+
+Given an arbitrarily nested array of arrays, return the maximum depth.
+
+For example:
+
+maxDepth([3, 2]) -> 1 (non-nested array, so maximum depth is 1 level)
+maxDepth([]) -> 1 (array may be empty)
+
+maxDepth([3, [6, 7], 2]) -> 2 (maximum depth is 2 levels)
+maxDepth([[2, 1], 8, 3, [4], 5]) -> 2 (maximum depth is 2 levels)
+maxDepth([3, [], 2]) -> 2 (inner arrays may be empty, but still count towards depth)
+
+maxDepth([3, [6, [7]], 2]) -> 3 (maximum depth is 3 levels)
+
+maxDepth([4, [0, [[3], 2]], 2, 7, 8, [1]]) -> 4 (maximum depth is 4 levels)
+
+*/
+
+type NestedArray = (number | NestedArray)[];
+
+const maxDepth = (arr: NestedArray): number => {
+ let max = 0;
+ for(const elem of arr){
+  if(Array.isArray(elem)){
+    max = Math.max(max, maxDepth(elem))
+  }
+ }
+
+ return max + 1;
+
+};
+// console.log(maxDepth([3, 2]))
+// console.log(maxDepth([]))
+// console.log(maxDepth([3, [6, 7], 2]) ) 
+// console.log(maxDepth([[2, 1], 8, 3, [4], 5]) )
+// console.log(maxDepth([3, [], 2]) )
+// console.log(maxDepth([3, [6, [7]], 2]))
+// console.log(maxDepth([4, [0, [[3], 2]], 2, 7, 8, [1]]))
+
+
+
+
+export default maxDepth;
