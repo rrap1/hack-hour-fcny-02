@@ -1,3 +1,7 @@
+# INTERNAL USE ONLY
+# This script is used by instructors/fellows to release weekly challenges.
+# Students do NOT need to run this.
+
 #!/bin/bash
 
 set -e
